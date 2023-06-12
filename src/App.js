@@ -16,18 +16,12 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route
-              path="/"
-              element={<ItemListContainer greeting={"Bienvenidos"} />}
-            />
-            <Route
-              path="/categoria/:categoryId"
-              element={<ItemListContainer />}
-            />
+            <Route path="/" element={<ItemListContainer greeting={"Bienvenidos"} />}/>
+            <Route path="/categoria/:categoryId" element={<ItemListContainer />} />
             <Route path="/item/:itemId" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />"
-            <Route path="*" element={<h1>404 NOT FOUD</h1>} />
+            <Route path="*" element={<h1>404 NOT FONUD</h1>} />
           </Routes>
         </BrowserRouter>
       </CartProvider>
