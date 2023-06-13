@@ -2,6 +2,9 @@ import { useContext } from "react";
 import { CartContext } from "../../context";
 import { Link, NavLink } from "react-router-dom";
 import { CartItem } from "../CartItem";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
+
 
 const Cart = () => {
   const { cart, clearCart, totalQuantity, totalCart } = useContext(CartContext);
@@ -25,7 +28,8 @@ const Cart = () => {
         CheckOut
       </NavLink>
       <button className="btn btn-danger m-1" onClick={() => clearCart()}>
-        Limpiar carrito !
+        Limpiar carrito{" "}
+        <FontAwesomeIcon icon={faTriangleExclamation} />
       </button>
     </div>
   );
